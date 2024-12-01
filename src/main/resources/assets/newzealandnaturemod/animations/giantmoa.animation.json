@@ -1,0 +1,63 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.giantmoa.idle": {
+			"loop": true,
+			"animation_length": 2,
+			"start_delay": "math.random(5,10)",
+			"loop_delay": "math.random(5,10)",
+			"bones": {
+				"Body": {
+					"position": {
+						"vector": [0, "math.sin(query.anim_time*-90)*0.75", 0]
+					}
+				}
+			}
+		},
+		"animation.giantmoa.walk": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"UpperLeg": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, -15]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.5": {
+							"vector": [0, 0, 15]
+						},
+						"2.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				},
+				"UpperLeg2": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0]
+						},
+						"0.5": {
+							"vector": [0, 0, 15]
+						},
+						"1.0": {
+							"vector": [0, 0, 0]
+						},
+						"1.5": {
+							"vector": [0, 0, -15]
+						},
+						"2.0": {
+							"vector": [0, 0, 0]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

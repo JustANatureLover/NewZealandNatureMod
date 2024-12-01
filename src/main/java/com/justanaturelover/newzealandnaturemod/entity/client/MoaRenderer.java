@@ -19,14 +19,14 @@ public class MoaRenderer extends GeoEntityRenderer<MoaEntity> {
 
     @Override
     public ResourceLocation getTextureLocation(MoaEntity instance) {
-        return new ResourceLocation(NewZealandNatureMod.MOD_ID, "textures/entity/moa/simplemoa.png");
+        return new ResourceLocation(NewZealandNatureMod.MOD_ID, "textures/entity/moa/giantmoa.png");
     }
 
     @Override
     public RenderType getRenderType(MoaEntity animatable, float partialTicks, PoseStack stack,
                                     MultiBufferSource renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
                                     ResourceLocation textureLocation) {
-        stack.scale(0.8F, 0.8F, 0.8F);
+        stack.scale(1.0F, 1.0F, 1.0F);
         return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn, textureLocation);
     }
 }

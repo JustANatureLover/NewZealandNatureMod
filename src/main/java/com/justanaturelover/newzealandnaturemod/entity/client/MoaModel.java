@@ -8,16 +8,16 @@ import software.bernie.geckolib3.model.AnimatedGeoModel;
 public class MoaModel extends AnimatedGeoModel<MoaEntity> {
     @Override
     public ResourceLocation getModelLocation(MoaEntity moaEntity) {
-        return new ResourceLocation(NewZealandNatureMod.MOD_ID, "geo/simplemoa.geo.json");
+        return new ResourceLocation(NewZealandNatureMod.MOD_ID, "geo/giantmoa.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureLocation(MoaEntity moaEntity) {
-        return new ResourceLocation(NewZealandNatureMod.MOD_ID, "textures/entity/moa/simplemoa.png");
+        return new ResourceLocation(NewZealandNatureMod.MOD_ID, "textures/entity/moa/giantmoa.png");
     }
 
     @Override
     public ResourceLocation getAnimationFileLocation(MoaEntity moaEntity) {
-        return new ResourceLocation(NewZealandNatureMod.MOD_ID, "animations/simplemoa.animation.json");
+        return new ResourceLocation(NewZealandNatureMod.MOD_ID, "animations/giantmoa.animation.json");
     }
 }

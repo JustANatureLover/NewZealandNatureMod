@@ -17,7 +17,7 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<MoaEntity>> MOA =
             ENTITY_TYPES.register("moa",
             () -> EntityType.Builder.of(MoaEntity::new, MobCategory.CREATURE)
-                    .sized(1.0f, 1.0f)
+                    .sized(1.7f, 2.3f)
                     .build(new ResourceLocation(NewZealandNatureMod.MOD_ID, "moa").toString()));
 
     public static void register(IEventBus eventBus) {
