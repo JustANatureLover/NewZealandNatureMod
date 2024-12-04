@@ -1,6 +1,7 @@
 package com.justanaturelover.newzealandnaturemod.entity;
 
 import com.justanaturelover.newzealandnaturemod.NewZealandNatureMod;
+import com.justanaturelover.newzealandnaturemod.entity.custom.KakapoEntity;
 import com.justanaturelover.newzealandnaturemod.entity.custom.MoaEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -19,6 +20,12 @@ public class ModEntityTypes {
             () -> EntityType.Builder.of(MoaEntity::new, MobCategory.CREATURE)
                     .sized(1.7f, 2.3f)
                     .build(new ResourceLocation(NewZealandNatureMod.MOD_ID, "moa").toString()));
+
+    public static final RegistryObject<EntityType<KakapoEntity>> KAKAPO =
+            ENTITY_TYPES.register("kakapo",
+                    () -> EntityType.Builder.of(KakapoEntity::new, MobCategory.CREATURE)
+                            .sized(0.5f, 0.5f)
+                            .build(new ResourceLocation(NewZealandNatureMod.MOD_ID, "kakapo").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

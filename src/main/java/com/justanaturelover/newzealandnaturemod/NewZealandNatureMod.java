@@ -1,6 +1,7 @@
 package com.justanaturelover.newzealandnaturemod;
 
 import com.justanaturelover.newzealandnaturemod.entity.ModEntityTypes;
+import com.justanaturelover.newzealandnaturemod.entity.client.KakapoRenderer;
 import com.justanaturelover.newzealandnaturemod.entity.client.MoaRenderer;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -49,6 +50,7 @@ public class NewZealandNatureMod
 
     private void clientSetup(final FMLClientSetupEvent event) {
         EntityRenderers.register(ModEntityTypes.MOA.get(), MoaRenderer::new);
+        EntityRenderers.register(ModEntityTypes.KAKAPO.get(), KakapoRenderer::new);
     }
 
 
