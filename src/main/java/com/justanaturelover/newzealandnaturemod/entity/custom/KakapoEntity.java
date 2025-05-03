@@ -33,7 +33,7 @@ public class KakapoEntity extends Animal implements IAnimatable {
                 .add(Attributes.MAX_HEALTH, 5.0D)
                 .add(Attributes.ATTACK_DAMAGE, 0.5f)
                 .add(Attributes.ATTACK_SPEED, 1.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.1f).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.3f).build();
     }
 
     protected void registerGoals() {
