@@ -1,8 +1,5 @@
 package com.justanaturelover.newzealandnaturemod;
 
-import com.justanaturelover.newzealandnaturemod.entity.ModEntityTypes;
-import com.justanaturelover.newzealandnaturemod.entity.client.KakapoRenderer;
-import com.justanaturelover.newzealandnaturemod.entity.client.MoaRenderer;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.Block;
@@ -37,22 +34,13 @@ public class NewZealandNatureMod
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModEntityTypes.register(eventBus);
-
         eventBus.addListener(this::setup);
-        eventBus.addListener(this::clientSetup);
 
         GeckoLib.initialize();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
-
-    private void clientSetup(final FMLClientSetupEvent event) {
-        EntityRenderers.register(ModEntityTypes.MOA.get(), MoaRenderer::new);
-        EntityRenderers.register(ModEntityTypes.KAKAPO.get(), KakapoRenderer::new);
-    }
-
 
     private void setup(final FMLCommonSetupEvent event)
     {
